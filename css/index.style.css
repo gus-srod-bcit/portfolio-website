@@ -1,0 +1,318 @@
+:root
+{
+    /* Light mode */
+    --light-text-color: #000000;
+    --light-secondary-text-color: #888888;
+
+    --light-bg-color: #FFFFFF;
+    --light-bg-secondary-color: #444444;
+
+    --light-button-primary-text: var(--light-text-color);
+    --light-button-primary-bg-color: #DDDDFF;
+    --light-button-primary-hover-bg-color: #AAAADD;
+    --light-button-primary-active-bg-color: #9988DD;
+
+    --light-anchor-text-color: #2222DD;
+    --light-anchor-clicked-text-color: #7722AA;
+    
+
+    /* Dark mode */
+    --dark-text-color: #FFFFFF;
+    --dark-secondary-text-color: #888888;
+
+    --dark-bg-color: #222222;
+    --dark-bg-secondary-color: #AAAAAA;
+
+    --dark-button-primary-text: var(--dark-text-color);
+    --dark-button-primary-bg-color: #443355;
+    --dark-button-primary-hover-bg-color: #331144;
+    --dark-button-primary-active-bg-color: #330033;
+
+    --dark-anchor-text-color: #5555FF;
+    --dark-anchor-clicked-text-color: #7722AA;
+}
+*
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    --text-color: var(--light-text-color);
+    --secondary-text-color: var(--light-secondary-text-color);
+
+    --bg-color: var(--light-bg-color);
+    --secondary-bg-color: var(--light-bg-secondary-color);
+
+    --button-primary-text-color: var(--light-button-primary-text);
+    --button-primary-bg-color: var(--light-button-primary-bg-color);
+    --button-primary-hover-bg-color: var(--light-button-primary-hover-bg-color);
+    --button-primary-active-bg-color: var(--light-button-primary-active-bg-color);
+
+    --anchor-text-color: var(--light-anchor-text-color);
+    --anchor-clicked-text-color: var(--light-anchor-clicked-text-color);
+
+
+    padding: 0px;
+    margin: 0px;
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    --banner-height: 50vh;
+    --standard-padding: 2vh 4vw;
+}
+body.dark-mode
+{
+    --text-color: var(--dark-text-color);
+    --secondary-text-color: var(--dark-secondary-text-color);
+
+    --bg-color: var(--dark-bg-color);
+    --secondary-bg-color: var(--dark-bg-secondary-color);
+
+    --button-primary-text-color: var(--dark-button-primary-text);
+    --button-primary-bg-color: var(--dark-button-primary-bg-color);
+    --button-primary-hover-bg-color: var(--dark-button-primary-hover-bg-color);
+    --button-primary-active-bg-color: var(--dark-button-primary-active-bg-color);
+    
+    --anchor-text-color: var(--dark-anchor-text-color);
+    --anchor-clicked-text-color: var(--dark-anchor-clicked-text-color);
+}
+
+
+nav
+{
+    background-color: var(--bg-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 10;
+    transition: transform 200ms ease-out;
+}
+
+.nav-hidden
+{
+    transform: translateY(-100%);
+}
+
+section, footer
+{
+    padding: 2vh 4vw;
+    position: relative;
+    z-index: 2;
+}
+
+section
+{
+    background-color: var(--bg-color);
+}
+
+header
+{
+    margin: 0px;
+
+    /* Banner sizing */
+    width: 100vw;
+    height: var(--banner-height);
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+main
+{
+    margin-top: var(--banner-height);
+}
+
+#dark-mode-button
+{
+    padding: 0.5vw;
+    font-size: 0; /* hide any text */
+}
+
+#dark-mode-button svg
+{
+    width: 24px;
+    height: 24px;
+    display: block;
+    flex: 0 0 auto;
+}
+
+#banner
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+header::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#banner-title
+{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+button
+{
+    padding: 1vh 2vw;
+    border: 1px solid var(--text-color);
+
+    transition: background-color 200ms;
+}
+
+a:link
+{
+    color: var(--anchor-text-color);
+}
+
+a:visited
+{
+    color: var(--anchor-clicked-text-color);
+}
+
+
+
+#nav-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1vmin 2vw;
+}
+
+
+
+button.primary
+{
+    color: var(--button-primary-text-color);
+    background-color: var(--button-primary-bg-color);
+}
+
+button.primary:hover
+{
+    background-color: var(--button-primary-hover-bg-color);
+}
+
+button.primary:active
+{
+    background-color: var(--button-primary-active-bg-color);
+}
+
+#headshot-aboutme
+{
+    width: 40vw;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+/* Projects section */
+#projects-row
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.project-card
+{
+    flex: 0 0 260px;
+    max-width: 320px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    scroll-snap-align: start;
+
+    transition:
+        transform 180ms ease-out,
+        background-color 180ms ease-out,
+        color 180ms ease-out,
+        box-shadow 180ms ease-out;
+}
+
+.project-cover-wrapper
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.project-cover
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-title
+{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.project-description
+{
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 160ms ease-out, max-height 160ms ease-out;
+}
+
+.project-card:hover,
+.project-card:focus-within
+{
+    transform: scale(1.05);
+    background-color: var(--button-primary-bg-color);
+    color: var(--button-primary-text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.project-card:hover .project-description,
+.project-card:focus-within .project-description
+{
+    opacity: 1;
+    max-height: 200px;
+}
