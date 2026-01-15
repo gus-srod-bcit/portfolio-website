@@ -20,8 +20,12 @@
     min-width: 0;
 }
 
-.center
+.justify-center, .center
+{
+    justify-content: center;
+}
+
+.items-center, .center
 {
     align-items: center;
-    justify-content: center;
 }

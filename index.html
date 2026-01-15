@@ -14,10 +14,13 @@
 
      <!-- Tailwind -->
       <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-
-     <!-- Scripts -->
-      <script src="src/darkmode.js" defer></script>
-      <script src="src/nav-scroll.js" defer></script>
+       <!-- jQuery -->
+       <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+       
+       <!-- Scripts -->
+       <script src="src/css-utils.js" defer></script>
+       <script src="src/nav-scroll.js" defer></script>
+       <script src="src/darkmode.js" defer></script>
 </head>
 <body class="">
     <nav>
@@ -50,9 +53,11 @@
             -->
             
             <section id="about-me">
-                <div class="flex-row">
-                    <img src="media/headshot.png" id="headshot-aboutme">
-                    <div class="flex flex-col">
+                <div class="flex-row gap-[4vw]">
+                    <div id="image-container">
+                        <img src="media/headshot.png" id="headshot-aboutme">
+                    </div>
+                    <div class="flex flex-col justify-center">
                         <h2>Hello</h2>
                         <p>I am gus. Trust. Hire. Pay me.</p>
                     </div>
