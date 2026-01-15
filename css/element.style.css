@@ -1,0 +1,14 @@
+a:link
+{
+    color: var(--anchor-text-color);
+}
+
+a:visited
+{
+    color: var(--anchor-clicked-text-color);
+}
+
+img
+{
+    width: 100%; height: 100%;
+}
