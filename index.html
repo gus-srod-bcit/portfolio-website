@@ -6,10 +6,11 @@
     <title>Portfolio WIP</title>
 
     <!-- Styles -->
-     <link rel="stylesheet" href="css/index.style.css">
+     <link href="css/util.style.css" rel="stylesheet">
+     <link href="css/index.style.css" rel="stylesheet">
 
      <!-- Tailwind -->
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 
      <!-- Scripts -->
       <script src="src/darkmode.js" defer></script>
@@ -31,7 +32,8 @@
         </div>
     </nav>
     <header>
-        <h1 id="bannerttitle-header">Gustavo Rodriguez</h1>
+        <h1 id="banner-title-header">Gustavo Rodriguez</h1>
+        <div class="darken-div"></div>
         <img src="media/headerbanner.png" id="banner-header">
     </header>
     <main>
@@ -45,21 +47,51 @@
             -->
             
             <section id="about-me">
-                <div class="flex flex-row">
-                    <img src="media/headshot.png">
+                <div class="flex-row">
+                    <img src="media/headshot.png" id="headshot-aboutme">
                     <div class="flex flex-col">
-                        <h3>Hello</h3>
-                        <p>I am gus. Trust. Hire. Repeat.</p>
+                        <h2>Hello</h2>
+                        <p>I am gus. Trust. Hire. Pay me.</p>
                     </div>
                 </div>
             </section>
+
+            <!-- EXPERIENCE (itch.io) -->
+            <section>
+                <h1>Experience</h1>
+                <div class="flex-row">
+                    <div>
+                        <img src="media/unitylogo.png">
+                    </div>
+                    <div>
+                        <p>
+                            I've been using Unity for a long time.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+             <section>
+                <h1>Projects</h1>
+                <div id="projects"></div>
+             </section>
         </div>
     </main>
-
     <footer>
         <div id="footer-content">
             
         </div>
     </footer>
+
+    <template>
+        <div class="flex-col">
+            <img>
+            <caption>Project Name</caption>
+            <div>
+                <p>Description</p>
+            </div>
+        </div>
+    </template>
 </body>
 </html>

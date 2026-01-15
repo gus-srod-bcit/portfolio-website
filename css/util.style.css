@@ -1,0 +1,15 @@
+.flex, .flex-row, .flex-col
+{
+    display: flex;
+    flex: 1 1;
+}
+
+.flew-row
+{
+    flex-direction: row;
+}
+
+.flex-col
+{
+    flex-direction: column;
+}
