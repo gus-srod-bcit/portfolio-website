@@ -115,8 +115,33 @@ main
 
     color: #FFFFFF;
     font-weight: 800;
-    font-size: clamp(2.5em, 5vw, 4em);
+    font-size: clamp(1.5em, 5vw, 4em);
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+
+    animation: title-scroll linear both;
+    animation-timeline: scroll(root); 
+    animation-range: 0px 100vh;
+}
+
+#banner-subtitle-header
+{
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: clamp(0.8em, 1.5vw, 3em);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+
+    top: calc(50px + 4vw);
 
     animation: title-scroll linear both;
     animation-timeline: scroll(root); 
@@ -132,6 +157,12 @@ main
     border-radius: 10%; 
     overflow: hidden;
     object-fit: cover;
+}
+
+.resizing-text
+{
+    --target-font-size: 2vw;
+    font-size: clamp(0.5em, var(--target-font-size), 2em)
 }
 
 
