@@ -82,3 +82,20 @@
 {
     opacity: 0;
 }
+
+
+.text-hover
+{
+    transition: color calc(var(--animation-time)*0.8) ease;
+}
+.text-hover:hover
+{
+    color: var(--text-hover-color);
+}
+
+
+.resizing-text
+{
+    --target-font-size: 2vw;
+    font-size: clamp(0.5em, var(--target-font-size), 1.4em);
+}

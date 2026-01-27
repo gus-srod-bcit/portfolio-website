@@ -4,6 +4,8 @@
     --text-color: none;
     --secondary-text-color: none;
     
+    --text-hover-color: none;
+    
     ---bg-color: none;
     ---bg-secondary-color: none;
     --bg-highlight-color: none;
@@ -23,6 +25,8 @@ body
     /* Light Mode */
     --text-color: #000000;
     --secondary-text-color: #888888;
+    
+    --text-hover-color: #111111;
     
     --bg-color: #FFFFFF;
     --bg-secondary-color: #CCCCCC;
@@ -45,6 +49,8 @@ body.dark-mode
     /* Dark Mode */
     --text-color: #FFFFFF;
     --secondary-text-color: #888888;
+    
+    --text-hover-color: #EEEEEE;
 
     --bg-color: #222222;
     --bg-secondary-color: #555555;
